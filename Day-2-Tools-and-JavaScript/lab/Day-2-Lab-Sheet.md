@@ -12,7 +12,7 @@ If your Day 1 files are missing or broken, copy the **Day 2 starter** folder fro
 
 ## Part 1: Install Node.js (10 minutes)
 
-1. Open your `Workshop-Installers` folder and find the **Node.js 22 LTS** installer. It is a file that ends in `.msi`.
+1. Open your `Workshop-Installers` folder and find the **Node.js 24 LTS** installer. It is a file that ends in `.msi`.
 2. **Double-click** it. If Windows asks "Do you want to allow this app to make changes?", click **Yes**.
 3. In the installer, click **Next** on each screen and keep the default choices. Accept the licence agreement when asked.
 4. If you see a page about **"Tools for Native Modules"**, do **not** tick the box.
@@ -56,7 +56,7 @@ Type each command and press **Enter**. After each one, compare what you see.
 node -v
 ```
 
-You should see a version that starts with `v22`, for example `v22.x.x`.
+You should see a version that starts with `v24`, for example `v24.x.x`.
 
 ```
 npm -v
@@ -515,7 +515,7 @@ node hello.js
 
 ## Final checklist
 
-- [ ] `node -v` shows version 22, and `node setup-check.js` shows four PASS lines.
+- [ ] `node -v` shows version 24, and `node setup-check.js` shows four PASS lines.
 - [ ] My Notes Board adds and deletes notes, and shows an error for empty input.
 - [ ] My About page shows the details I chose, and the instructor line.
 - [ ] I ran `hello.js` and opened it in the browser.

@@ -57,7 +57,7 @@ Do not cut: Parts 1 to 4 (everything installed and checked), the notes board in 
 
 ## Before ending the class
 
-- [ ] Everyone who could install has `node -v` showing 22 and four PASS lines.
+- [ ] Everyone who could install has `node -v` showing 24 and four PASS lines.
 - [ ] Students with problems are on your list.
 - [ ] Students know to bring GitHub account details tomorrow, and to read the Day 3 theory once.
 - [ ] Backup done.

@@ -104,11 +104,11 @@ PATH is a list of folders. When you type a command like `node`, Windows looks fo
 
 | Tool | What it is | Why we need it |
 |------|------------|----------------|
-| **Node.js 22 LTS** | A program that runs JavaScript outside the browser | Our backend will be written in JavaScript |
+| **Node.js 24 LTS** | A program that runs JavaScript outside the browser | Our backend will be written in JavaScript |
 | **npm** | A tool that comes with Node.js. It downloads ready-made code packages | We use it from Day 3 |
 | **Git for Windows** | A tool that tracks changes in your code | We use it on Days 4 and 5 |
 
-**What does LTS mean?** LTS means **Long Term Support**. It is a version that is kept stable and gets fixes for a long time. It is the right choice for learning and for real projects. We use the **22** line of Node.js so that everyone in the room has the same version.
+**What does LTS mean?** LTS means **Long Term Support**. It is a version that is kept stable and gets fixes for a long time. It is the right choice for learning and for real projects. We use the **24** line of Node.js so that everyone in the room has the same version.
 
 ### Versions matter
 
@@ -126,7 +126,7 @@ You can check that Node.js works from the terminal:
 node -v
 ```
 
-It prints the version, for example `v22.x.x`.
+It prints the version, for example `v24.x.x`.
 
 You can also run a JavaScript file:
 
@@ -411,7 +411,7 @@ On Day 3 we replace this by **Express**, a tool that makes servers much easier t
 
 1. The **terminal** is where we type commands. We use **Command Prompt**.
 2. **PATH** is the list of folders where Windows looks for commands. Reopen the terminal after installing.
-3. **Node.js** runs JavaScript outside the browser. We use the **22 LTS** version.
+3. **Node.js** runs JavaScript outside the browser. We use the **24 LTS** version.
 4. In JavaScript: **variables**, **arrays**, **objects**, **functions**, **events**.
 5. The **DOM** is the page in memory. JavaScript changes it, and the screen changes.
 6. Data kept only in the browser is lost on refresh. We need a server and a database.

@@ -72,7 +72,7 @@ If you are not sure about the file, ask your instructor first.
 
 **Fix:** Read the **Hint** under that line. The usual causes:
 
-- **Node.js version is not 22:** install the Node.js 22 LTS file from the workshop folder, not another version.
+- **Node.js version is not 24:** install the Node.js 24 LTS file from the workshop folder, not another version.
 - **Git is not available:** install Git, then open a new terminal.
 - **Port 3000 is not free:** an old server is still running. Find its terminal window and press **Ctrl + C**.
 

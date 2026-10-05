@@ -52,7 +52,7 @@ Do not cut: the concept talk (frontend, backend, database), the edit-save-refres
 
 - [ ] At least most students can show `index.html` with a styled page.
 - [ ] Students know where their `Workshop` folder is, and they made a backup.
-- [ ] Students know where the installer folder is and what to collect: Node.js 22 LTS (`.msi`, 64-bit) and Git for Windows (`.exe`, 64-bit).
+- [ ] Students know where the installer folder is and what to collect: Node.js 24 LTS (`.msi`, 64-bit) and Git for Windows (`.exe`, 64-bit).
 - [ ] Students know to create a GitHub account at home.
 - [ ] Write down the names of students who seemed lost, so you can check on them first tomorrow.
 

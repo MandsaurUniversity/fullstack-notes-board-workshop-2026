@@ -10,7 +10,7 @@ Almost every risk in this workshop is a "will it work on the lab computers?" que
 
 Use a Windows 11 Home PC that does **not** already have Node.js or Git. A lab PC is best.
 
-- [ ] **A1. Node.js installs.** Run the Node.js 22 LTS `.msi` from the share. Does it need an administrator prompt? Does it install without extra steps? Time taken: ______
+- [ ] **A1. Node.js installs.** Run the Node.js 24 LTS `.msi` from the share. Does it need an administrator prompt? Does it install without extra steps? Time taken: ______
 - [ ] **A2. Git installs.** Run the Git for Windows `.exe`. Which screens appear? Is the default editor Vim? Time taken: ______
 - [ ] **A3. New terminal sees the tools.** Close VS Code, open it again, open a **Command Prompt** terminal. Run `node -v`, `npm -v`, `git --version`. Results: ______
 - [ ] **A4. Setup check.** Copy `setup-check.js` into a folder and run `node setup-check.js`. Do you see four PASS lines? ______
@@ -28,8 +28,8 @@ Use a Windows 11 Home PC that does **not** already have Node.js or Git. A lab PC
 
 ## Pilot C: Before Day 4 (SQLite)
 
-- [ ] **C1. Built-in SQLite.** On Node.js 22 LTS, run: `node -e "require('node:sqlite')"`. Does it work without any flag? ______ Does it print an "ExperimentalWarning"? ______
-  - **Observed so far:** on Node.js 22.22.0 on Linux, it worked without a flag and printed an ExperimentalWarning. The Node.js documentation says it is "no longer behind a flag but still experimental" from version 22.13. **Not yet tested on Windows.**
+- [ ] **C1. Built-in SQLite.** On Node.js 24 LTS, run: `node -e "require('node:sqlite')"`. Does it work without any flag? ______ Does it print an "ExperimentalWarning"? ______
+  - **Observed so far:** on Node.js 24.21.0 on Linux, it ran without a flag and printed no warning (on 22.22.0 it printed an ExperimentalWarning). I could not read the stability note in the Node.js documentation. **Not yet tested on Windows.**
 - [ ] **C2. Alternative driver.** If C1 fails, test the `better-sqlite3` package: run `npm install better-sqlite3` on a lab PC and check that it installs without needing a compiler. ______ (Not tested.)
 - [ ] **C3. Decide.** Write the driver chosen for the workshop: ______
 - [ ] **C4. PostgreSQL (optional track).** Install the PostgreSQL installer on a lab PC. Does it install without problems? How long? ______ Does `npm install pg` work? ______ (Not tested.)
@@ -39,7 +39,7 @@ Use a Windows 11 Home PC that does **not** already have Node.js or Git. A lab PC
 - [ ] **D1. GitHub.** Create a throwaway repository. In VS Code, run `git init`, `git add .`, `git commit`, and `git push`. Does it work from the lab network? ______
 - [ ] **D2. Render sign-up.** Sign up for Render with a new account. Does Render ask for a **credit card** or a **phone number** before it lets you create a Free web service? ______ (The documentation pages I read do not say.)
 - [ ] **D3. Free web service from GitHub.** Create a web service from your throwaway repository using the **Free** instance type. Write down the exact build command and start command you used, and how long the first deploy took: ______
-- [ ] **D4. Node version on Render.** Is the app built with Node.js 22? How did you set it? ______
+- [ ] **D4. Node version on Render.** Is the app built with Node.js 24? How did you set it? ______
 - [ ] **D5. Environment variable.** Add the `NOTES_PASSWORD` variable in the dashboard. Does the app read it? ______
 - [ ] **D6. Cold start and data reset.** Leave the service idle for more than 15 minutes, then open it. How long does the first load take? ______ Does a SQLite file created by the app disappear after a restart? ______ (Render's documentation says the filesystem is not kept.)
 - [ ] **D7. Render PostgreSQL (optional track).** Create a free PostgreSQL database. Note when it expires ______ (the documentation says 30 days after creation). Can the app connect with the connection string? ______ Is SSL needed? ______

@@ -8,7 +8,7 @@
 const { execSync } = require("node:child_process");
 const net = require("node:net");
 
-const REQUIRED_NODE_MAJOR = 22;
+const REQUIRED_NODE_MAJOR = 24;
 let failures = 0;
 
 function show(passed, title, hint) {

@@ -354,7 +354,7 @@ Day 2 starts with installing software. To save time, do these two things before 
 
 Your instructor will tell you where to find the workshop installer folder. Copy these files into a folder named `Workshop-Installers` on your computer or on a USB drive:
 
-1. The **Node.js 22 LTS** installer for Windows, 64-bit (a file ending in `.msi`).
+1. The **Node.js 24 LTS** installer for Windows, 64-bit (a file ending in `.msi`).
 2. The **Git for Windows** installer, 64-bit (a file ending in `.exe`).
 
 Please take the files only from the folder your instructor points to. Other versions, such as "Current" releases or 32-bit files, can cause problems later.

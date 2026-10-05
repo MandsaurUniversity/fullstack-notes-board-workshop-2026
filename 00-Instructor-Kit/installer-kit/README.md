@@ -8,7 +8,7 @@ On Day 1, students are told to collect a folder named `Workshop-Installers`. On 
 
 | Item | Needed? | Rule for the version | File type | Where to get it |
 |------|---------|----------------------|-----------|-----------------|
-| Node.js, Windows 64-bit installer | **Required** | The **22 LTS** line. Use one single file for everyone | `.msi` | The official Node.js download page (nodejs.org). Choose version 22, LTS, Windows, x64 |
+| Node.js, Windows 64-bit installer | **Required** | The **24 LTS** line. Use one single file for everyone | `.msi` | The official Node.js download page (nodejs.org). Choose version 24, LTS, Windows, x64 |
 | Git for Windows, 64-bit setup | **Required** | The latest stable release. One single file for everyone | `.exe` | The official Git download page (git-scm.com), Windows, 64-bit setup |
 | `setup-check.js` | **Required** | The file in this folder | `.js` | This folder |
 | PostgreSQL for Windows, 64-bit installer | Optional (the PostgreSQL track on Days 4 and 5) | To be decided after your pilot test | `.exe` | The official PostgreSQL download page (postgresql.org) |
@@ -20,7 +20,7 @@ I could not read the Node.js download listing from where I prepared this folder,
 
 | Item | Exact file name | Version | Checksum (SHA-256) |
 |------|-----------------|---------|--------------------|
-| Node.js 22 LTS | | | |
+| Node.js 24 LTS | | | |
 | Git for Windows | | | |
 | PostgreSQL (optional) | | | |
 
@@ -36,7 +36,7 @@ Compare the result with the checksum that the publisher shows on its download pa
 
 ```
 Workshop-Installers/
-  node-22-lts/
+  node-24-lts/
     (the Node.js .msi file)
   git/
     (the Git for Windows .exe file)
