@@ -1,0 +1,10 @@
+# Packages (anyone can get them again with: npm install)
+node_modules/
+
+# Private settings (passwords live here)
+.env
+
+# Database files (added on Day 4)
+*.sqlite
+*.sqlite3
+*.db
