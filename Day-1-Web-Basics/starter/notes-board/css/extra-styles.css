@@ -1,0 +1,90 @@
+/* extra-styles.css
+   Copy everything in this file and paste it at the END of your style.css.
+   (Day 1, Step 8) */
+
+/* Form */
+label {
+  display: block;
+  font-weight: 600;
+  margin: 12px 0 4px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}
+
+button {
+  margin-top: 14px;
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+/* Notes */
+.note {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+
+.note h3 {
+  margin: 0 0 6px;
+}
+
+.note p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* About page details */
+.details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 16px;
+  margin: 0;
+}
+
+.details dt {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.details dd {
+  margin: 0;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 16px;
+  font-size: 0.9rem;
+}

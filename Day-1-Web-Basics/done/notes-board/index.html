@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes Board</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>My Notes Board</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Add a note</h2>
+      <form id="note-form">
+        <label for="note-title">Title</label>
+        <input type="text" id="note-title" name="title" placeholder="Example: Buy a notebook" maxlength="60">
+
+        <label for="note-text">Note</label>
+        <textarea id="note-text" name="text" rows="4" placeholder="Write your note here" maxlength="300"></textarea>
+
+        <button type="submit">Add note</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>All notes</h2>
+      <div id="notes-list">
+        <article class="note">
+          <h3>Welcome</h3>
+          <p>This is a sample note. On Day 2, you will make this page add real notes.</p>
+        </article>
+        <article class="note">
+          <h3>Study plan</h3>
+          <p>Learn HTML on Monday, CSS on Tuesday, and JavaScript on Wednesday.</p>
+        </article>
+        <article class="note">
+          <h3>Idea</h3>
+          <p>Use this app every day to keep my class notes in one place.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built in the Web Technology workshop at Mandsaur University.</p>
+  </footer>
+</body>
+</html>
