@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Secrets and local settings (never commit these)
+.env
+.env.*
+!.env.example
+
+# Local database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor and tool leftovers
+*.swp
+*.tmp
+__pycache__/
+.pdf-build/
+
+# Quizzes hold the answers: never commit them (any folder, any day)
+quiz/
+**/quiz/**
+*-Quiz.csv
+*-Quiz-Answer-Key.*
