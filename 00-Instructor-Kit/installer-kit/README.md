@@ -16,12 +16,12 @@ On Day 1, students are told to collect a folder named `Workshop-Installers`. On 
 
 ### Fill in after you download
 
-I could not read the Node.js download listing from where I prepared this folder, so the exact file names and versions are **not stated here**. Please fill in this table once you have the files, and keep a copy on the board.
+The Node.js and Git rows below are the files found in the instructor's `Workshop-Installers` folder on 6 October 2026. The checksums were computed on that computer with `certutil`. They were **not compared** with the checksums on the publishers' download pages, so do that check before you copy the files to the share. The PostgreSQL row is still empty. Keep a copy of this table on the board.
 
 | Item | Exact file name | Version | Checksum (SHA-256) |
 |------|-----------------|---------|--------------------|
-| Node.js 24 LTS | | | |
-| Git for Windows | | | |
+| Node.js 24 LTS | `node-v24.21.0-x64.msi` | 24.21.0 | `bb0eaee134f9357f22aea915ee793343e627aefc1e66488164bac6915bce2cac` |
+| Git for Windows | `Git-2.56.0-64-bit.exe` | 2.56.0 | `bfe94e7b419b16eee9fecbd1253a98e3d4f49ba8f029630549052278ffe286a6` |
 | PostgreSQL (optional) | | | |
 
 To check that a file is not damaged, open Command Prompt in the folder and type:

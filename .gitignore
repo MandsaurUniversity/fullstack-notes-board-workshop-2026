@@ -31,3 +31,8 @@ quiz/
 **/quiz/**
 *-Quiz.csv
 *-Quiz-Answer-Key.*
+
+# Installer files are large and never belong in Git
+Workshop-Installers/
+*.msi
+*.exe
