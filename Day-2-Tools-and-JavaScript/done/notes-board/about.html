@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - My Notes Board</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>My Notes Board</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>About this project</h2>
+      <p>
+        This Notes Board was built during a 5-day hands-on Web Technology
+        workshop. It shows how the frontend, the backend, the database and
+        hosting work together in one small app.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Built by</h2>
+      <!-- JavaScript fills this list from js/student-details.js -->
+      <dl id="student-details" class="details"></dl>
+      <p id="student-tagline" class="tagline"></p>
+    </section>
+
+    <section id="instructor-section" class="card">
+      <h2>Guided by</h2>
+      <!-- JavaScript fills this line from js/student-details.js -->
+      <p id="instructor-line"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built in the Web Technology workshop at Mandsaur University.</p>
+  </footer>
+
+  <script src="js/student-details.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>
