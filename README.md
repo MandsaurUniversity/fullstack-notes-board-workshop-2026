@@ -5,6 +5,7 @@ A hands-on workshop for BCA second-year students at **Mandsaur University**. In 
 **Instructor:** Rahul Dhangar ([GitHub](https://github.com/rahuldhangar))
 **Dates:** Tuesday 6 October 2026 to Saturday 10 October 2026
 **Language:** The instructor teaches in Hindi. All written material is in simple English.
+**Node.js version:** 24 LTS. On 6 October 2026 the Node.js release pages listed 24.21.0 as the latest LTS version, and Node.js 26 was not yet LTS. Node.js 24's active support ends on 20 October 2026 and its security support ends on 30 April 2028, according to endoflife.date. Check nodejs.org again before you collect the installers.
 
 ---
 
@@ -14,9 +15,9 @@ A hands-on workshop for BCA second-year students at **Mandsaur University**. In 
 |-----|-------|-----------------------------------|-----------------------|
 | 1 | How the web works, HTML and CSS | A styled home page with sample notes, and an About page | **Ready** |
 | 2 | Installing tools, the terminal, JavaScript | Adds and deletes notes in the browser, About page driven by one details file, first Node.js server | **Ready** |
-| 3 | A server with Node.js and Express | Notes live on a server. Adding a note needs a password. Read access is public | Coming next |
-| 4 | A database (SQLite) and Git | Notes are saved in a database. The code is on GitHub. Optional PostgreSQL track | Coming |
-| 5 | Hosting on Render | The app runs on the internet with a public link | Coming |
+| 3 | A server with Node.js and Express | Notes live on a server. Adding a note needs a password. Read access is public | **Ready** |
+| 4 | A database (SQLite) and Git | Notes are saved in a database. The code is on GitHub. Optional PostgreSQL track | **Ready** |
+| 5 | Hosting on Render | The app runs on the internet with a public link | **Ready** |
 
 **Success tiers (the pass condition is Tier 1):**
 
@@ -60,7 +61,7 @@ Other files:
 | Topic | Decision |
 |-------|----------|
 | Frontend | HTML, CSS and JavaScript, no frameworks |
-| Backend | Node.js **22 LTS** with Express |
+| Backend | Node.js **24 LTS** with Express |
 | Database | SQLite for everyone. PostgreSQL is an optional extra track for students who finish early |
 | Project | A Notes Board |
 | Editor | Visual Studio Code, already installed on the lab computers |
@@ -76,11 +77,13 @@ Other files:
 
 I prepared this folder without access to your lab. These items are **not tested** on a Windows 11 Home computer, and some are not confirmed at all. Use `INSTRUCTOR-PILOT-CHECKLIST.md`.
 
-- The exact Node.js 22 LTS and Git for Windows file names and versions (the download listings could not be read).
+- The exact Node.js 24 LTS and Git for Windows file names and versions (the download listings could not be read).
 - How the Node.js and Git installers look on Windows 11 Home. The lab sheet says "keep the default choices", plus a few screens that I know of. Check them.
-- Whether Node.js 22's built-in SQLite module (`node:sqlite`) works without a flag on Windows. On Linux, with Node.js 22.22.0, it worked without a flag and printed an experimental warning. The Node.js documentation calls it experimental in 22.x.
+- Whether Node.js 24's built-in SQLite module (`node:sqlite`) works on Windows. On Linux, with Node.js 24.21.0, it ran without a flag and printed no warning. I could not read the Node.js documentation page that states its stability, so whether it is still marked experimental in 24 is not confirmed.
 - Render: whether a card or phone number is required for a Free web service, how many sign-ups from one network are allowed, and how long a deploy takes. Render's documentation says the filesystem of a Free web service is not kept on restart, redeploy or spin-down, and that a free PostgreSQL database expires 30 days after creation.
 - The Google Forms script (`tools/quiz-builder`), and the Google Classroom menu steps.
+- Days 3 to 5 were tested on Linux with Node.js 24.21.0 (the API, the SQLite version, and a browser test of adding and deleting notes). Nothing in them was run on Windows. The optional PostgreSQL code was tested on PostgreSQL 16 on Linux only.
+- Git for Windows sign-in to GitHub, and the Render dashboard screens and button names.
 
 ## Rebuilding the PDFs
 
