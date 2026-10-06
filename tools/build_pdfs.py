@@ -9,8 +9,9 @@ Needs:
     - Python package "playwright" with its Chromium browser installed
 
 Usage (run from the main workshop folder):
-    python tools/build_pdfs.py                 # build all PDFs
-    python tools/build_pdfs.py Day-1-Web-Basics # build only one folder
+    python tools/build_pdfs.py                     # build all PDFs
+    python tools/build_pdfs.py Day-1-Web-Basics     # build only one folder
+    python tools/build_pdfs.py GOOGLE-CLASSROOM.md # build a single markdown file
 
 Notes:
     - Files inside "starter" and "done" folders are code folders, so they are skipped.
@@ -19,6 +20,8 @@ Notes:
 
 import argparse
 import html
+import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -31,17 +34,35 @@ CSS_FILE = Path(__file__).resolve().parent / "pdf.css"
 SKIP_DIRS = {"starter", "done", "node_modules", ".git"}
 
 
+def get_pandoc_cmd() -> str:
+    found = shutil.which("pandoc")
+    if found:
+        return found
+    candidates = [
+        Path(os.environ.get("LOCALAPPDATA", "")) / "Pandoc" / "pandoc.exe",
+        Path(os.environ.get("ProgramFiles", "")) / "Pandoc" / "pandoc.exe",
+        Path(os.environ.get("ProgramFiles(x86)", "")) / "Pandoc" / "pandoc.exe",
+    ]
+    for candidate in candidates:
+        if candidate.is_file():
+            return str(candidate)
+    return "pandoc"
+
+
 def find_markdown_files(base: Path):
     for path in sorted(base.rglob("*.md")):
-        relative_parts = set(path.relative_to(ROOT).parts)
-        if relative_parts & SKIP_DIRS:
-            continue
+        try:
+            relative_parts = set(path.relative_to(ROOT).parts)
+            if relative_parts & SKIP_DIRS:
+                continue
+        except ValueError:
+            pass
         yield path
 
 
 def markdown_to_html(markdown_path: Path, html_path: Path, title: str):
     command = [
-        "pandoc",
+        get_pandoc_cmd(),
         str(markdown_path),
         "--from", "gfm",
         "--to", "html5",
@@ -63,12 +84,32 @@ def first_heading(markdown_path: Path) -> str:
 
 def main():
     parser = argparse.ArgumentParser(description="Build PDFs from Markdown files.")
-    parser.add_argument("folder", nargs="?", default=".", help="folder to scan (default: whole workshop)")
+    parser.add_argument("target", nargs="?", default=".", help="folder or single markdown file to build (default: whole workshop)")
     parser.add_argument("--force", action="store_true", help="rebuild even if the PDF is up to date")
     args = parser.parse_args()
 
-    base = (ROOT / args.folder).resolve() if not Path(args.folder).is_absolute() else Path(args.folder)
-    files = list(find_markdown_files(base))
+    target_path = Path(args.target)
+    if not target_path.is_absolute():
+        if not target_path.exists() and (ROOT / args.target).exists():
+            target_path = (ROOT / args.target).resolve()
+        else:
+            target_path = target_path.resolve()
+
+    if not target_path.exists():
+        print(f"Error: Target '{args.target}' not found.")
+        return 1
+
+    if target_path.is_file():
+        if target_path.suffix.lower() != ".md":
+            print(f"Error: '{target_path.name}' is not a Markdown (.md) file.")
+            return 1
+        files = [target_path]
+    elif target_path.is_dir():
+        files = list(find_markdown_files(target_path))
+    else:
+        print(f"Error: Target '{args.target}' is neither a file nor a directory.")
+        return 1
+
     if not files:
         print("No Markdown files found.")
         return 0
@@ -80,9 +121,14 @@ def main():
 
         for markdown_path in files:
             pdf_path = markdown_path.with_suffix(".pdf")
+            try:
+                display_path = pdf_path.relative_to(ROOT)
+            except ValueError:
+                display_path = pdf_path.name
+
             if (not args.force and pdf_path.exists()
                     and pdf_path.stat().st_mtime >= markdown_path.stat().st_mtime):
-                print(f"up to date  {pdf_path.relative_to(ROOT)}")
+                print(f"up to date  {display_path}")
                 continue
 
             title = first_heading(markdown_path)
@@ -109,7 +155,7 @@ def main():
                 ),
             )
             built += 1
-            print(f"built       {pdf_path.relative_to(ROOT)}")
+            print(f"built       {display_path}")
 
         browser.close()
 
@@ -119,3 +165,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+

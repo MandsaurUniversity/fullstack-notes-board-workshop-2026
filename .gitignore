@@ -25,6 +25,7 @@ Desktop.ini
 *.tmp
 __pycache__/
 .pdf-build/
+.venv/
 
 # Quizzes hold the answers: never commit them (any folder, any day)
 quiz/
