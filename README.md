@@ -2,7 +2,7 @@
 
 A hands-on workshop for BCA second-year students at **Mandsaur University**. In five days of two hours each (10 hours in total), students build one small full-stack app, the **Notes Board**, and learn how the frontend, the backend, a database and hosting work together.
 
-**Instructor:** Rahul Dhangar ([GitHub](https://github.com/rahuldhangar))
+**Instructor:** [Rahul Dhangar](https://github.com/rahuldhangar)
 **Dates:** Tuesday 6 October 2026 to Saturday 10 October 2026
 **Language:** The instructor teaches in Hindi. All written material is in simple English.
 **Node.js version:** 24 LTS. On 6 October 2026 the Node.js release pages listed 24.21.0 as the latest LTS version, and Node.js 26 was not yet LTS. Node.js 24's active support ends on 20 October 2026 and its security support ends on 30 April 2028, according to endoflife.date. Check nodejs.org again before you collect the installers.
@@ -84,6 +84,10 @@ I prepared this folder without access to your lab. These items are **not tested*
 - The Google Forms script (`tools/quiz-builder`), and the Google Classroom menu steps.
 - Days 3 to 5 were tested on Linux with Node.js 24.21.0 (the API, the SQLite version, and a browser test of adding and deleting notes). Nothing in them was run on Windows. The optional PostgreSQL code was tested on PostgreSQL 16 on Linux only.
 - Git for Windows sign-in to GitHub, and the Render dashboard screens and button names.
+
+## Licence
+
+This repository is shared under the [MIT Licence](LICENSE). You may use, copy and change the code and the written material, including for your own classes, as long as you keep the copyright and licence notice.
 
 ## Rebuilding the PDFs
 

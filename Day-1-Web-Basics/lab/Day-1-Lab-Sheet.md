@@ -331,7 +331,7 @@ The rest of the CSS is for the form, the notes, the About page and the footer. I
 1. Click the `notes-board` folder. Click **New File** and type `about.html`.
 2. Type `!` and press **Tab**, as in Part 2. Change the title to `About - My Notes Board`, and add the same `<link>` line for the stylesheet.
 3. Copy the `<header>` block from `index.html` into the `<body>` of `about.html`. (Select it, press Ctrl + C, and paste it with Ctrl + V.)
-4. After the header, add this code. **Replace YOUR NAME and YOUR ROLL NUMBER with your own details.**
+4. After the header, add this code. **Replace each placeholder in angle brackets (for example `<enter-your-name>`) with your own details.** In the HTML you will see `&lt;` and `&gt;`. They are the safe way to show the signs `<` and `>` on a page. Keep `&lt;` and `&gt;` around your own text only if you want to keep a placeholder, and delete the whole `<dt>` and `<dd>` pair for any line you do not want to share.
 
 ```html
   <main class="container">
@@ -348,13 +348,17 @@ The rest of the CSS is for the form, the notes, the About page and the footer. I
       <h2>Built by</h2>
       <dl class="details">
         <dt>Name</dt>
-        <dd>YOUR NAME</dd>
+        <dd>&lt;enter-your-name&gt;</dd>
         <dt>Roll number</dt>
-        <dd>YOUR ROLL NUMBER</dd>
+        <dd>&lt;enter-your-roll-number&gt;</dd>
         <dt>Class</dt>
         <dd>BCA Second Year</dd>
+        <dt>Batch</dt>
+        <dd>2025-26</dd>
         <dt>College</dt>
         <dd>Mandsaur University</dd>
+        <dt>GitHub</dt>
+        <dd>&lt;enter-your-github-profile-link&gt;</dd>
       </dl>
       <p class="hint">
         You choose what to show here. Delete any line you do not want to share.
@@ -364,8 +368,8 @@ The rest of the CSS is for the form, the notes, the About page and the footer. I
     <section class="card">
       <h2>Guided by</h2>
       <p>
-        Instructor: Rahul Dhangar.
-        <a href="https://github.com/rahuldhangar" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+        Instructor:
+        <a href="https://github.com/rahuldhangar" target="_blank" rel="noopener noreferrer">Rahul Dhangar</a>
       </p>
     </section>
   </main>
@@ -430,5 +434,5 @@ Tick each box before you leave.
 1. Add a fourth sample note to the home page.
 2. Change the blue colour to your favourite colour using the CSS variables.
 3. Change the font size of the note titles (`.note h3`).
-4. Add a link to your GitHub profile on the About page, after you create your account.
+4. Replace the GitHub placeholder on the About page with the link to your profile, after you create your account.
 5. Make the notes show a different left border colour (`border-left` in the `.note` rule).

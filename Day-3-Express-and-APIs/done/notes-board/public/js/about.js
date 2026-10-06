@@ -38,6 +38,7 @@ const detailsList = document.getElementById("student-details");
 addDetail(detailsList, "Name", studentDetails.name);
 addDetail(detailsList, "Roll number", studentDetails.rollNumber);
 addDetail(detailsList, "Class", studentDetails.className);
+addDetail(detailsList, "Batch", studentDetails.batch);
 addDetail(detailsList, "College", studentDetails.college);
 addDetail(detailsList, "GitHub", studentDetails.githubProfile);
 
@@ -50,15 +51,18 @@ const instructorLine = document.getElementById("instructor-line");
 
 if (instructorDetails.name) {
   const role = instructorDetails.role ? instructorDetails.role + ": " : "";
-  instructorLine.textContent = role + instructorDetails.name + ". ";
+  instructorLine.textContent = role;
 
   if (isSafeLink(instructorDetails.link)) {
+    // The instructor's name is the link.
     const link = document.createElement("a");
     link.href = instructorDetails.link;
-    link.textContent = "GitHub profile";
+    link.textContent = instructorDetails.name;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     instructorLine.appendChild(link);
+  } else {
+    instructorLine.textContent = role + instructorDetails.name;
   }
 } else {
   instructorSection.hidden = true;

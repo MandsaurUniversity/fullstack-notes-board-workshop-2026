@@ -138,7 +138,7 @@ Open `package.json`. It must have the `start` script and the `engines` part, as 
 ### 1d. Create `README.md`
 
 1. In VS Code, click the **New File** icon in the explorer, and name the file `README.md` (in the `notes-board` folder, not inside `public`).
-2. Type this. You may write your own name in the first line.
+2. Type this. Replace each placeholder in angle brackets (for example `<enter-your-name>`) in the **Built by** section with your own details. Delete any line you do not want to share.
 
 **File: `README.md`**
 
@@ -162,6 +162,19 @@ A small full-stack web app built in the Web Technology workshop at Mandsaur Univ
 
 - Anyone can read the notes. You need the password to add or delete a note.
 - The `.env` file is private and is not part of this repository.
+
+## Built by
+
+- Name: <enter-your-name>
+- Roll number: <enter-your-roll-number>
+- Class: BCA Second Year
+- Batch: 2025-26
+- College: Mandsaur University
+- GitHub: <enter-your-github-profile-link>
+
+## Guided by
+
+Instructor: [Rahul Dhangar](https://github.com/rahuldhangar)
 ```
 
 3. Save the file.
