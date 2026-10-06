@@ -2,9 +2,10 @@
 
 A hands-on workshop for BCA second-year students at **Mandsaur University**. In five days of two hours each (10 hours in total), students build one small full-stack app, the **Notes Board**, and learn how the frontend, the backend, a database and hosting work together.
 
-**Instructor:** [Rahul Dhangar](https://github.com/rahuldhangar)
-**Dates:** Tuesday 6 October 2026 to Saturday 10 October 2026
-**Language:** The instructor teaches in Hindi. All written material is in simple English.
+**Instructor:** [Rahul Dhangar](https://github.com/rahuldhangar)  
+**Dates:** Tuesday 6 October 2026 to Saturday 10 October 2026  
+**Language:** The instructor teaches in Hindi. All written material is in simple English.  
+**Google Classroom:** [Joining Guide & Class Link](GOOGLE-CLASSROOM.md) (Class code: `txz4xibu`)  
 **Node.js version:** 24 LTS. On 6 October 2026 the Node.js release pages listed 24.21.0 as the latest LTS version, and Node.js 26 was not yet LTS. Node.js 24's active support ends on 20 October 2026 and its security support ends on 30 April 2028, according to endoflife.date. Check nodejs.org again before you collect the installers.
 
 ---
@@ -52,6 +53,7 @@ Other folders:
 
 Other files:
 
+- `GOOGLE-CLASSROOM.md`: Google Classroom invite link, class code (`txz4xibu`), and step-by-step instructions to join using a personal email address.
 - `INSTRUCTOR-PILOT-CHECKLIST.md`: tests to run on a clean lab computer before each risky day.
 
 ---
@@ -71,7 +73,7 @@ Other files:
 | Login | Reading notes is public. Adding a note needs one shared password, kept in an `.env` file and never committed to Git |
 | About page | Students choose what to show. The instructor line is encouraged |
 | Hosting | Render, Free web service, from GitHub |
-| Quizzes | 5 questions a day in Google Classroom, built from the CSV files in `00-Instructor-Kit/quiz/` |
+| Quizzes | 5 questions a day in [Google Classroom](GOOGLE-CLASSROOM.md), built from the CSV files in `00-Instructor-Kit/quiz/` |
 
 ## Things not verified yet
 
